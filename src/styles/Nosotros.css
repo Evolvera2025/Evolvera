@@ -1,0 +1,431 @@
+/* Nosotros.css - Estilos específicos para la sección Nosotros */
+
+/* Variables CSS específicas para Nosotros */
+.nosotros-section {
+  --nosotros-primary-color: #0f172a;
+  --nosotros-secondary-color: #1e293b;
+  --nosotros-accent-color: #3b82f6;
+  --nosotros-accent-secondary: #06b6d4;
+  --nosotros-text-primary: #f8fafc;
+  --nosotros-text-secondary: #cbd5e1;
+  --nosotros-text-muted: #94a3b8;
+  --nosotros-bg-primary: #0f172a;
+  --nosotros-bg-secondary: #1e293b;
+  --nosotros-bg-card: #334155;
+  --nosotros-border-color: #475569;
+  --nosotros-border-accent: rgba(59, 130, 246, 0.3);
+  --nosotros-shadow-dark: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --nosotros-shadow-dark-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  --nosotros-shadow-dark-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  --nosotros-border-radius: 0.5rem;
+  --nosotros-border-radius-lg: 1rem;
+  --nosotros-transition: all 0.3s ease;
+}
+
+/* Sección principal - Solo afecta elementos con clase .nosotros-section */
+.nosotros-section.page-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--nosotros-bg-primary) 0%, var(--nosotros-secondary-color) 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.nosotros-section.page-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Container principal */
+.nosotros-section .container {
+  max-width: var(--nosotros-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilos de texto centrado */
+.nosotros-section .text-center {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.nosotros-section .text-center h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--nosotros-text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  position: relative;
+  background: linear-gradient(135deg, var(--nosotros-text-primary) 0%, var(--nosotros-accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nosotros-section .text-center h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 0.25rem;
+  background: linear-gradient(90deg, var(--nosotros-accent-color), var(--nosotros-accent-secondary));
+  border-radius: 0.125rem;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.nosotros-section .text-center h2::before {
+  content: '';
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 2px;
+  background: var(--nosotros-accent-color);
+  border-radius: 50%;
+  box-shadow: 
+    10px 10px 0 var(--nosotros-accent-color),
+    -10px -10px 0 var(--nosotros-accent-secondary),
+    20px -10px 0 var(--nosotros-accent-color),
+    -20px 10px 0 var(--nosotros-accent-secondary);
+  animation: nosotros-glow 3s ease-in-out infinite;
+}
+
+.nosotros-section .text-center p {
+  font-size: 1.125rem;
+  color: var(--nosotros-text-secondary);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid para misión y visión */
+.nosotros-section .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.nosotros-section .grid > div {
+  background: var(--nosotros-bg-secondary);
+  padding: 2rem;
+  border-radius: var(--nosotros-border-radius-lg);
+  box-shadow: var(--nosotros-shadow-dark);
+  border: 1px solid var(--nosotros-border-accent);
+  transition: var(--nosotros-transition);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.nosotros-section .grid > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.25rem;
+  background: linear-gradient(90deg, var(--nosotros-accent-color), var(--nosotros-accent-secondary));
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.nosotros-section .grid > div::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.nosotros-section .grid > div:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: var(--nosotros-shadow-dark-lg);
+  border-color: var(--nosotros-accent-color);
+}
+
+.nosotros-section .grid h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--nosotros-text-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.nosotros-section .grid h3::before {
+  content: '✦';
+  color: var(--nosotros-accent-color);
+  font-size: 1.25rem;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.nosotros-section .grid p {
+  color: var(--nosotros-text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sección del equipo */
+.nosotros-section .mt-24 {
+  margin-top: 6rem;
+}
+
+.nosotros-section .equipo-titulo {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.nosotros-section .equipo-titulo h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--nosotros-text-primary);
+  margin-bottom: 1rem;
+  position: relative;
+  background: linear-gradient(135deg, var(--nosotros-text-primary) 0%, var(--nosotros-accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nosotros-section .equipo-titulo h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 0.25rem;
+  background: linear-gradient(90deg, var(--nosotros-accent-color), var(--nosotros-accent-secondary));
+  border-radius: 0.125rem;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+.nosotros-section .equipo-titulo p {
+  font-size: 1.125rem;
+  color: var(--nosotros-text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid del equipo */
+.nosotros-section .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Miembros del equipo */
+.nosotros-section .team-member {
+  background: var(--nosotros-bg-secondary);
+  border-radius: var(--nosotros-border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--nosotros-shadow-dark);
+  transition: var(--nosotros-transition);
+  border: 1px solid var(--nosotros-border-accent);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  animation: nosotros-fadeInUp 0.6s ease forwards;
+}
+
+.nosotros-section .team-member::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.25rem;
+  background: linear-gradient(90deg, var(--nosotros-accent-color), var(--nosotros-accent-secondary));
+  transform: scaleX(0);
+  transition: var(--nosotros-transition);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.nosotros-section .team-member::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.nosotros-section .team-member:hover::before {
+  transform: scaleX(1);
+}
+
+.nosotros-section .team-member:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: var(--nosotros-shadow-dark-xl);
+  border-color: var(--nosotros-accent-color);
+}
+
+.nosotros-section .team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  border: 4px solid var(--nosotros-border-color);
+  transition: var(--nosotros-transition);
+  box-shadow: var(--nosotros-shadow-dark);
+  position: relative;
+  z-index: 1;
+}
+
+.nosotros-section .team-member:hover img {
+  border-color: var(--nosotros-accent-color);
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+.nosotros-section .team-member h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--nosotros-text-primary);
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.nosotros-section .team-member p {
+  color: var(--nosotros-accent-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animaciones específicas para Nosotros */
+@keyframes nosotros-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nosotros-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  }
+}
+
+/* Delays de animación específicos */
+.nosotros-section .team-member:nth-child(1) { animation-delay: 0.1s; }
+.nosotros-section .team-member:nth-child(2) { animation-delay: 0.2s; }
+.nosotros-section .team-member:nth-child(3) { animation-delay: 0.3s; }
+.nosotros-section .team-member:nth-child(4) { animation-delay: 0.4s; }
+
+/* Estados de carga para imágenes */
+.nosotros-section .team-member img[src*="placehold"] {
+  background: linear-gradient(45deg, var(--nosotros-bg-card), var(--nosotros-border-color));
+  color: var(--nosotros-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Responsive Design específico para Nosotros */
+@media (min-width: 768px) {
+  .nosotros-section .container {
+    padding: 0 2rem;
+  }
+  
+  .nosotros-section .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  
+  .nosotros-section .text-center h2 {
+    font-size: 3rem;
+  }
+  
+  .nosotros-section .equipo-titulo h2 {
+    font-size: 2.5rem;
+  }
+  
+  .nosotros-section .team-grid {
+    gap: 2.5rem;
+  }
+  
+  .nosotros-section .team-member {
+    padding: 2.5rem;
+  }
+  
+  .nosotros-section .team-member img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nosotros-section.page-section {
+    padding: 6rem 0;
+  }
+  
+  .nosotros-section .text-center {
+    margin-bottom: 4rem;
+  }
+  
+  .nosotros-section .mt-24 {
+    margin-top: 8rem;
+  }
+  
+  .nosotros-section .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Accesibilidad específica para Nosotros */
+@media (prefers-reduced-motion: reduce) {
+  .nosotros-section * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .nosotros-section .team-member:nth-child(n) {
+    animation: none;
+  }
+  
+  .nosotros-section .text-center h2::before {
+    animation: none;
+  }
+}

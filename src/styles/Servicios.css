@@ -1,0 +1,394 @@
+/* =================================
+   SECCIÓN SERVICIOS - ESTILOS BASE
+================================= */
+
+#servicios {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de partículas de fondo */
+#servicios::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  padding-top: 90px;
+}
+
+/* =================================
+   ENCABEZADO DE LA SECCIÓN
+================================= */
+
+.servicios-header {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.servicios-header h2 {
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.servicios-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+.servicios-header p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #94a3b8;
+  text-align: center;
+}
+
+/* =================================
+   TARJETAS DE SERVICIOS
+================================= */
+
+.servicio-item {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideInUp 0.8s ease-out forwards;
+  margin-bottom: 5rem;
+}
+
+.servicio-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.servicio-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Contenido del servicio */
+.servicio-content {
+  padding: 2rem;
+  background: rgba(30, 41, 59, 0.3);
+  border-radius: 16px;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.servicio-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.servicio-content:hover {
+  transform: translateY(-10px);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 
+    0 20px 40px rgba(59, 130, 246, 0.1),
+    0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+.servicio-content:hover::before {
+  left: 100%;
+}
+
+/* Títulos de servicios */
+.servicio-title {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.servicio-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.4s ease;
+}
+
+.servicio-content:hover .servicio-title::after {
+  width: 50px;
+}
+
+/* Descripción del servicio */
+.servicio-descripcion {
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.servicio-content:hover .servicio-descripcion {
+  color: #cbd5e1;
+}
+
+/* =================================
+   LISTA DE CARACTERÍSTICAS
+================================= */
+
+.servicio-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.servicio-lista li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #94a3b8;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+  border-radius: 8px;
+  position: relative;
+}
+
+.servicio-lista li:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+  background: rgba(59, 130, 246, 0.05);
+  padding-left: 12px;
+}
+
+/* Icono de check mejorado */
+.check-icon {
+  width: 20px;
+  height: 20px;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  padding: 2px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.servicio-lista li:hover .check-icon {
+  background: #3b82f6;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* =================================
+   IMÁGENES DE SERVICIOS
+================================= */
+
+.servicio-imagen {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.servicio-imagen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.servicio-imagen:hover::before {
+  opacity: 1;
+}
+
+.servicio-imagen img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.servicio-imagen:hover img {
+  transform: scale(1.05);
+  filter: brightness(1) contrast(1.2);
+}
+
+/* =================================
+   ANIMACIONES
+================================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Animación de entrada con delay para elementos */
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+  .servicio-content {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .servicio-title {
+    font-size: 1.5rem;
+  }
+  
+  .servicio-imagen {
+    margin-bottom: 2rem;
+  }
+  
+  .servicio-lista li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  
+  .servicio-content {
+    padding: 3rem;
+  }
+  
+  .servicio-title {
+    font-size: 2rem;
+  }
+}
+
+/* =================================
+   EFECTOS ADICIONALES
+================================= */
+
+/* Efecto de brillo en hover */
+.servicio-content {
+  position: relative;
+}
+
+.servicio-content::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.servicio-content:hover::after {
+  animation: shine 0.6s ease-in-out;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Indicador de scroll */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}

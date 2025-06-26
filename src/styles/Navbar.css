@@ -1,0 +1,219 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  justify-content: center;
+  /* Agregamos altura para probar el scroll */
+  min-height: 200vh;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 1rem; /* Corregido el typo "1ren" */
+}
+
+a:hover{
+  color: #457B9D;
+}
+
+/*HEADER - AHORA FIJO*/
+header{
+  position: fixed; /* Cambiado de relative a fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 0rem;
+  z-index: 1000; /* Para que esté por encima de otros elementos */
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.LogoN {
+  width: 75px;
+}
+/* Clase que se agrega cuando se hace scroll */
+header.scrolled {
+ /* background-color: rgba(29, 53, 87, 0.98);*/
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  padding: 0 1.5rem; /* Padding más pequeño */
+}
+
+.nav-bar{
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(4px);
+  padding: 0.9rem;
+  border: none;
+  border-style: hidden;
+  border-radius: 15px;
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Navbar más compacta al hacer scroll */
+header.scrolled .nav-bar {
+  height: 50px;
+  padding: 0.5rem;
+}
+
+.nav-bar .logo{
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: font-size 0.3s ease;
+}
+
+.nav-bar .logo a{
+  color: white;
+  text-decoration: none;
+}
+
+/* Logo más pequeño al hacer scroll */
+header.scrolled .nav-bar .logo {
+  font-size: 1.3rem;
+}
+
+.nav-bar .links{
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-bar .toggle_btn{
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn{
+  background-color: #3b82f6;
+  color: #ffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Corregido */
+}
+
+.action_btn:hover{
+  transform: scale(1.05); /* Corregido */
+  color: white;
+}
+
+.action_btn:active{
+  transform: scale(0.95); /* Corregido */
+}
+
+/*lista responsiva*/
+.dropdown_menu{
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(85, 82, 82, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Ajuste del dropdown cuando el header está scrolled */
+header.scrolled .dropdown_menu {
+  top: 50px;
+  backdrop-filter: blur(15px);
+}
+
+.dropdown_menu.open{
+  height: 288px;
+  backdrop-filter: blur(10px);
+}
+
+.dropdown_menu li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*CONTENIDO PRINCIPAL*/
+/* Agregamos margen superior para compensar el header fijo */
+
+/* Secciones para probar el scroll */
+.section {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+}
+
+#home { background-color: rgba(69, 123, 157, 0.3); }
+#nosotros { background-color: rgba(168, 218, 220, 0.3); }
+#servicios { background-color: rgba(241, 250, 238, 0.1); }
+#precios { background-color: rgba(29, 53, 87, 0.5); }
+#contacto { background-color: rgba(69, 123, 157, 0.5); }
+
+/*LISTA ENCABEZADO*/
+.nosotros h1{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.nosotros p{ /* Corregido el typo "nosostros" */
+  width: 400px;
+}
+
+/*RESPONSIVIDAD*/
+@media(max-width: 992px) {
+  .nav-bar .links,
+  .nav-bar .action_btn {
+    display: none;
+  }
+
+  .nav-bar .toggle_btn{
+    display: block;
+  }
+
+  .dropdown_menu{
+    display: block;
+  }
+
+}
+
+@media (max-width: 576px){
+  .dropdown_menu{
+    left: 2rem;
+    width: unset;
+    backdrop-filter: blur(15px);
+  }
+  
+  main {
+    margin-top: 70px;
+    padding: 1rem;
+  }
+}
