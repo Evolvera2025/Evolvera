@@ -10,7 +10,7 @@ const Planes = () => {
             Planes Flexibles para cada Necesidad
           </h2>
           <p className="planes-description">
-            Creemos en la transparencia. Nuestros planes están diseñados para adaptarse al tamaño y la etapa de tu proyecto, garantizando siempre la máxima calidad y el mejor retorno de inversión.
+            En Evolvera, la transparencia es clave. Nuestros planes están diseñados para adaptarse al tamaño, ritmo y visión de tu proyecto, asegurando siempre la máxima calidad, escalabilidad y retorno de inversión desde el primer clic.
           </p>
         </div>
         
@@ -18,12 +18,12 @@ const Planes = () => {
           {/* Plan 1: Esencial */}
           <div className="plan-card plan-basic">
             <div className="plan-header">
-              <h3 className="plan-name">Plan Esencial</h3>
-              <p className="plan-subtitle">Ideal para startups y MVPs.</p>
+              <h3 className="plan-name">Plan Basico</h3>
+              <p className="plan-subtitle">Ideal para negocios que inician su presencia en línea.</p>
             </div>
             
             <div className="plan-price">
-              <span className="price-amount">Desde $50,000</span>
+              <span className="price-amount">Desde $3,000</span>
               <span className="price-currency">MXN</span>
               <p className="price-period">por proyecto</p>
             </div>
@@ -39,13 +39,25 @@ const Planes = () => {
                 <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span>Diseño responsive.</span>
+                <span>Diseño responsivo.</span>
               </li>
               <li className="feature-item">
                 <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <span>Formulario de contacto.</span>
+              </li>
+               <li className="feature-item">
+                <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Enlace a redes sociales.</span>
+              </li>
+              <li className="feature-item">
+                <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Entrega rápida.</span>
               </li>
             </ul>
             
@@ -59,11 +71,11 @@ const Planes = () => {
             
             <div className="plan-header">
               <h3 className="plan-name">Plan Profesional</h3>
-              <p className="plan-subtitle">Para negocios en crecimiento.</p>
+              <p className="plan-subtitle">Perfecto para empresas que requieren interacción con sus clientes.</p>
             </div>
             
             <div className="plan-price">
-              <span className="price-amount">Desde $120,000</span>
+              <span className="price-amount">Desde $8,000</span>
               <span className="price-currency">MXN</span>
               <p className="price-period">por proyecto</p>
             </div>
@@ -73,7 +85,7 @@ const Planes = () => {
                 <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span>Aplicación web a medida (CRUD).</span>
+                <span>Formularios funcionales con almacenamiento en base de datos.</span>
               </li>
               <li className="feature-item">
                 <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,7 +103,7 @@ const Planes = () => {
                 <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span>Diseño UI/UX avanzado.</span>
+                <span>Página web completamente dinámica.</span>
               </li>
             </ul>
             
@@ -104,12 +116,13 @@ const Planes = () => {
           <div className="plan-card plan-enterprise">
             <div className="plan-header">
               <h3 className="plan-name">Plan Empresarial</h3>
-              <p className="plan-subtitle">Soluciones a gran escala.</p>
+              <p className="plan-subtitle">Para empresas que necesitan automatización, datos y visualización avanzada.</p>
             </div>
             
             <div className="plan-price">
-              <span className="price-amount">Hablemos</span>
-              <p className="price-period">presupuesto personalizado</p>
+              <span className="price-amount">Desde $15,000</span>
+              <span className="price-currency">MXN</span>
+              <p className="price-period">por proyecto</p>
             </div>
             
             <ul className="plan-features">
@@ -117,7 +130,7 @@ const Planes = () => {
                 <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span>Plataformas SaaS complejas.</span>
+                <span>Integración con APIs externas (pasarelas de pago, clima, cotizaciones, etc.)</span>
               </li>
               <li className="feature-item">
                 <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,13 +142,13 @@ const Planes = () => {
                 <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span>Integraciones empresariales (ERP, CRM).</span>
+                <span>Dashboards interactivos con gráficas y reportes (Chart.js, Power BI, etc.)</span>
               </li>
               <li className="feature-item">
                 <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span>Soporte prioritario y SLA.</span>
+                <span>Soporte técnico personalizado y mantenimiento mensual.</span>
               </li>
             </ul>
             

@@ -6,26 +6,31 @@ const equipo = [
     nombre: 'Josue Baca',
     rol: 'Full Stack Developer',
     imagen: '../../public/images/Josue.png',
+    linkedin: 'https://www.linkedin.com/in/josuebaca/', 
   },
   {
     nombre: 'Abraham Velazquez',
     rol: 'Full Stack Developer',
     imagen: 'https://placehold.co/400x400/1f2937/FFFFFF?text=CTO',
+    linkedin: 'https://www.linkedin.com/in/abrahamvelazquez/', 
   },
   {
     nombre: 'Pablo Hernan',
     rol: 'CEO Fundador',
     imagen: '../../public/images/Pablo.png',
+    linkedin: 'https://www.linkedin.com/in/pablo-hernan-gómez-jiménez-976a83293',
   },
   {
     nombre: 'Mario Romero',
     rol: 'BackEnd Developer',
     imagen: '../../public/images/Mario.png',
+    linkedin: 'https://www.linkedin.com/in/marioromero/', 
   },
   {
     nombre: 'Patricia Sherlyn',
-    rol: 'Social Media Maanager',
+    rol: 'Social Media Manager',
     imagen: '../../public/images/Pati.png',
+    linkedin: 'https://www.linkedin.com/in/patriciasherlyn/', 
   },
 ];
 
@@ -36,10 +41,7 @@ const Nosotros = () => {
         <div className="text-center">
           <h2>Somos tu Socio Tecnológico Estratégico</h2>
           <p>
-            Más que una agencia de desarrollo, somos un equipo de innovadores,
-            pensadores y creadores apasionados por construir el futuro digital.
-            Nuestra misión es traducir tus ideas en soluciones tecnológicas
-            robustas y eficientes.
+            Más que una agencia, somos un aliado para tu crecimiento digital. Un equipo de innovadores, desarrolladores y creativos comprometidos con transformar tus ideas en soluciones reales.
           </p>
         </div>
 
@@ -48,18 +50,13 @@ const Nosotros = () => {
           <div>
             <h3>Nuestra Misión</h3>
             <p>
-              Empoderar a empresas de todos los tamaños a través de tecnología
-              de vanguardia, creando plataformas web escalables que generen un
-              impacto medible y un crecimiento sostenible.
+              Impulsar a empresas de todos los tamaños mediante tecnología de vanguardia, creando plataformas web escalables con impacto real y crecimiento sostenible, alineadas con sus objetivos de negocio.
             </p>
           </div>
           <div>
             <h3>Nuestra Visión</h3>
             <p>
-              Ser el referente en desarrollo web a medida en Latinoamérica,
-              reconocidos por nuestra excelencia técnica, nuestro enfoque en la
-              experiencia de usuario y nuestra capacidad para forjar alianzas a
-              largo plazo con nuestros clientes.
+              Ser el referente en soluciones digitales a medida en Latinoamérica, reconocidos por nuestra excelencia técnica, enfoque centrado en el usuario y capacidad para construir alianzas duraderas con cada cliente.
             </p>
           </div>
         </div>
@@ -69,8 +66,7 @@ const Nosotros = () => {
           <div className="equipo-titulo">
             <h2>Conoce a Nuestro Equipo</h2>
             <p>
-              El talento detrás de la tecnología. Un grupo diverso de
-              profesionales listos para afrontar cualquier desafío.
+              Somos un equipo diverso, creativo y altamente capacitado, listo para enfrentar cualquier desafío y convertir ideas en soluciones digitales de alto impacto.
             </p>
           </div>
 
@@ -88,6 +84,9 @@ const Nosotros = () => {
                 />
                 <h4>{miembro.nombre}</h4>
                 <p>{miembro.rol}</p>
+                <a href={miembro.linkedin} target="_blank" rel="noopener noreferrer">
+                  <i className="fa-brands fa-linkedin" style={{ color: '#ffffff', fontSize: '2rem', marginTop: '10px' }}></i>
+                </a>
               </div>
             ))}
           </div>

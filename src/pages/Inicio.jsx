@@ -54,9 +54,9 @@ const Inicio = () => {
 
         {/* CTA final */}
         <div className="cta">
-          <h2>¿Tienes una idea?</h2>
+          <h2>¿Tienes una idea? <br /> ¡Hagámosla realidad!</h2>
           <p>
-            Convirtámosla en una realidad digital. Contáctanos y descubre cómo podemos ayudarte a alcanzar tus metas.
+           Contáctanos y descubre cómo podemos ayudarte a impulsar tu negocio con soluciones tecnológicas hechas a la medida.
           </p>
           <a href="#contacto" className="cta-boton">
             Iniciar mi Proyecto

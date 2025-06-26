@@ -10,8 +10,7 @@ const Servicios = () => {
             Servicios Diseñados para Crecer
           </h2>
           <p>
-            Ofrecemos soluciones integrales que cubren todo el ciclo de vida del desarrollo de software,
-            desde la idea hasta el lanzamiento y más allá.
+            En Evolvera, brindamos soluciones completas y estratégicas, acompañándote en cada etapa del desarrollo: desde la primera idea hasta el lanzamiento exitoso... y mucho más allá.
           </p>
         </div>
 
@@ -24,14 +23,12 @@ const Servicios = () => {
                   Desarrollo Web a Medida
                 </h3>
                 <p className="servicio-descripcion">
-                  Creamos aplicaciones web complejas, portales de cliente y plataformas SaaS desde cero.
-                  Nuestro enfoque se centra en la arquitectura escalable, código limpio y rendimiento óptimo
-                  para asegurar que tu plataforma pueda crecer sin limitaciones.
+                  Creamos aplicaciones web complejas, portales de clientes y plataformastotalmente a medida. Nuestro enfoque se basa en una arquitectura escalable, código limpio y un rendimiento excepcional, para que tu plataforma esté lista para crecer sin límites.
                 </p>
                 <ul className="servicio-lista">
                   <li className="animate-delay-100">
                     <CheckIcon className="check-icon" />
-                    <span>Plataformas SaaS y multi-tenant</span>
+                    <span>Diseño y desarrollo limpio</span>
                   </li>
                   <li className="animate-delay-200">
                     <CheckIcon className="check-icon" />
