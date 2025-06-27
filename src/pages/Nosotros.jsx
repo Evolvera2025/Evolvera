@@ -6,7 +6,7 @@ const equipo = [
     nombre: 'Josue Baca',
     rol: 'Full Stack Developer',
     imagen: '../../public/images/Josue.png',
-    linkedin: 'https://www.linkedin.com/in/josuebaca/', 
+    linkedin: 'http://www.linkedin.com/in/josue-alexander-baca-cortes-45537025b', 
   },
   {
     nombre: 'Abraham Velazquez',
@@ -30,7 +30,7 @@ const equipo = [
     nombre: 'Patricia Sherlyn',
     rol: 'Social Media Manager',
     imagen: '../../public/images/Pati.png',
-    linkedin: 'https://www.linkedin.com/in/patriciasherlyn/', 
+    linkedin: 'https://www.linkedin.com/in/patricia-sherylin-gonz%C3%A1lez-guzm%C3%A1n-22614a328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', 
   },
 ];
 
