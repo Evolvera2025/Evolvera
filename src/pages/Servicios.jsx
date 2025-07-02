@@ -3,7 +3,7 @@ import '../styles/Servicios.css';
 const Servicios = () => {
   return (
     <section id="servicios" className="page-section">
-      <div className="container mx-auto px-6 py-16">
+      <div className="">
         {/* Encabezado de la sección */}
         <div className="servicios-header">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
@@ -14,7 +14,7 @@ const Servicios = () => {
           </p>
         </div>
 
-        <div className="mt-20 space-y-20 px-4 md:px-8 lg:px-16">
+        <div className="mt-20 space-y-20 px-4 md:px-8 lg:px-8">
           {/* Servicio 1 - Desarrollo Web */}
           <div className="servicio-item flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="w-full md:w-1/2">

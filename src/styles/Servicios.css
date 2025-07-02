@@ -34,6 +34,7 @@
   animation: fadeInUp 0.8s ease-out forwards;
   text-align: center;
   margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 
 .servicios-header h2 {
@@ -298,7 +299,7 @@
    RESPONSIVE DESIGN
 ================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 758px) {
   .servicio-content {
     padding: 1.5rem;
     margin-bottom: 2rem;
