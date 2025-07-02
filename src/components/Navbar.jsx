@@ -61,7 +61,7 @@ export default function Navbar() {
     <header className={isScrolled ? 'scrolled' : ''}>
       <div className="nav-bar">
         <div className="logo">
-          <a href="#" onClick={(e) => handleLinkClick(e, '#home')}><img  className="LogoN" src="../../public/images/evolvera_logo_horizontal_blanco.png"/></a>
+          <a href="#" onClick={(e) => handleLinkClick(e, '#home')}><img  className="LogoN" src="/img/evolvera_logo_horizontal_blanco.png"/></a>
         </div>
 
         <ul className="links">

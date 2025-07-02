@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="footer-container">
 
         <div className="footer-column brand">
-          <img className="LogoF" src="../../public/images/evolvera_logo_horizontal_blanco.png" alt="" />
+          <img className="LogoF" src="/img/evolvera_logo_horizontal_blanco.png" alt="" />
           <p>Transformando ideas en experiencias digitales.</p>
         </div>
 

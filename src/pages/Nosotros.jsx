@@ -5,31 +5,31 @@ const equipo = [
   {
     nombre: 'Josue Baca',
     rol: 'Full Stack Developer',
-    imagen: '../../public/images/Josue.png',
+    imagen: '/img/Josue.png',
     linkedin: 'http://www.linkedin.com/in/josue-alexander-baca-cortes-45537025b', 
   },
   {
     nombre: 'Abraham Velazquez',
     rol: 'Full Stack Developer',
-    imagen: 'https://placehold.co/400x400/1f2937/FFFFFF?text=CTO',
+    imagen: '/img/Abraham.jpg',
     linkedin: 'https://www.linkedin.com/in/abrahamvelazquez/', 
   },
   {
     nombre: 'Pablo Hernan',
     rol: 'CEO Fundador',
-    imagen: '../../public/images/Pablo.png',
+    imagen: '/img/Pablo.png',
     linkedin: 'https://www.linkedin.com/in/pablo-hernan-gómez-jiménez-976a83293',
   },
   {
     nombre: 'Mario Romero',
     rol: 'BackEnd Developer',
-    imagen: '../../public/images/Mario.png',
+    imagen: '/img/Mario.png',
     linkedin: 'https://www.linkedin.com/in/marioromero/', 
   },
   {
     nombre: 'Patricia Sherlyn',
     rol: 'Social Media Manager',
-    imagen: '../../public/images/Pati.png',
+    imagen: '/img/Pati.png',
     linkedin: 'https://www.linkedin.com/in/patricia-sherylin-gonz%C3%A1lez-guzm%C3%A1n-22614a328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', 
   },
 ];
